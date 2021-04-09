@@ -20,20 +20,30 @@ public class playerJoin implements Listener {
 
     @EventHandler
     void join(PlayerJoinEvent event){
-        File filePlayers = new File(plugin.getDataFolder() + File.separator + "players.yml");
-        FileConfiguration filePlayersFC = YamlConfiguration.loadConfiguration(filePlayers);
-        List<String> allPlayers = filePlayersFC.getStringList("players");
 
+        List<String> allPlayers = getPlayersFromFile();
         if (!allPlayers.contains(event.getPlayer().getName()) && plugin.propertiesGive.isGiveOnFirstJoin()){
             event.getPlayer().getInventory().addItem(itemStackLuckyBlock.createLuckyBlockItem(plugin.propertiesGive.getCountFJ()));
             allPlayers.add(event.getPlayer().getName());
 
-            filePlayersFC.set("players", allPlayers);
-            try {
-                filePlayersFC.save(filePlayers);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            saveChangesInFile(allPlayers);
+        }
+    }
+
+    private List<String> getPlayersFromFile(){
+        File filePlayers = new File(plugin.getDataFolder() + File.separator + "players.yml");
+        FileConfiguration filePlayersFC = YamlConfiguration.loadConfiguration(filePlayers);
+        return filePlayersFC.getStringList("players");
+    }
+
+    private void saveChangesInFile(List<String> allPlayers){
+        File filePlayers = new File(plugin.getDataFolder() + File.separator + "players.yml");
+        FileConfiguration filePlayersFC = YamlConfiguration.loadConfiguration(filePlayers);
+        filePlayersFC.set("players", allPlayers);
+        try {
+            filePlayersFC.save(filePlayers);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
