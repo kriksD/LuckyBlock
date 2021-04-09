@@ -1,0 +1,12 @@
+name: LuckyBlock
+version: ${project.version}
+main: kriks.luckyblock.LuckyBlock
+api-version: 1.16
+authors: [ kriks ]
+description: Добавляє лакі блокі на сервер.
+website: https://weathergood000.wixsite.com/kriks
+
+commands:
+  getluckyblock:
+    description: Get lucky block.
+    usage: /getluckyblock <count>

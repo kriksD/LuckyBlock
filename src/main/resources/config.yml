@@ -1,0 +1,15 @@
+propertiesForGive:
+  giveEveryTime: false
+  timeET: 1200 # in ticks
+  countET: 1
+  giveOnFirstJoin: false
+  countFJ: 32
+
+messages:
+  ExceptionMessage: '[LuckyBlock] Exception: '
+  OnEnable: '[LuckyBlock] Plugin is started.'
+  OnDisable: '[LuckyBlock] Plugin is stopped.'
+  CommandIsSuccess: '[LuckyBlock] LuckyBlocks is received.'
+  CommandManyArgs: '[LuckyBlock] Too many arguments: '
+  CommandNotNumeric: '[LuckyBlock] Incorrect arguments: '
+  CommandError: '[LuckyBlock] Command not worked :('
