@@ -5,6 +5,8 @@
 
 Версия игры: 1.16.5
 
+Видать себе лаки блок: /getluckyblock <count> или просто /getluckyblock
+
 Если вы нашли этот проект, то будет не плохо, если объясните что я делаю не правильно.
 
 Если вам нужет этот плагин, можете скачать с моего google диска: https://drive.google.com/file/d/1rzlO6RC5Rq4Tif2bTF1v0A4IWeBeVscY/view?usp=sharing
