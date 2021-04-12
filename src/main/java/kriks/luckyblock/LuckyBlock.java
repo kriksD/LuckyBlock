@@ -1,16 +1,8 @@
 package kriks.luckyblock;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public final class LuckyBlock extends JavaPlugin {
